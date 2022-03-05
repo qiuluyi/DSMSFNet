@@ -1,0 +1,35 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="14">
+            <item index="0" class="java.lang.String" itemvalue="opencv-python" />
+            <item index="1" class="java.lang.String" itemvalue="cython" />
+            <item index="2" class="java.lang.String" itemvalue="imgaug" />
+            <item index="3" class="java.lang.String" itemvalue="scipy" />
+            <item index="4" class="java.lang.String" itemvalue="scikit-learn" />
+            <item index="5" class="java.lang.String" itemvalue="h5py" />
+            <item index="6" class="java.lang.String" itemvalue="Pillow-PIL" />
+            <item index="7" class="java.lang.String" itemvalue="tensorboardX" />
+            <item index="8" class="java.lang.String" itemvalue="metric-learn" />
+            <item index="9" class="java.lang.String" itemvalue="numpy" />
+            <item index="10" class="java.lang.String" itemvalue="torchvision" />
+            <item index="11" class="java.lang.String" itemvalue="Cython" />
+            <item index="12" class="java.lang.String" itemvalue="Pillow" />
+            <item index="13" class="java.lang.String" itemvalue="shapely" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="segmentation_models_pytorch_4TorchLessThan120" />
+          <option value="step2to4_train_validate_inference.tnscui_utils.solver.*" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
