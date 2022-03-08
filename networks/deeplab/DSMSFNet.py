@@ -109,19 +109,14 @@ class _MSF(nn.Module):
         self.relu=nn.ReLU()
 
     def forward(self, x):
-        # torch.Size([4, 256, 64, 64])
         feat1 = self.b0(x)
-        # torch.Size([4, 256, 64, 64])
         feat2 = self.b1(x)
-        # torch.Size([4, 256, 64, 64])
         feat3 = self.b2(x)
-        # torch.Size([4, 256, 64, 64])
         feat4 = self.b3(x)
         feat5 = self.b4(x)
 
         fusion0 = self.fus0(torch.cat((feat1, feat2, feat3, feat4), dim=1))
         fusion1 = self.fus1(torch.cat((feat1, feat2, feat3, feat4, feat5), dim=1))
-        # torch.Size([4, 256, 64, 64])
 
         # feat6 = self.b5(x)
         # fusion->256 feat->256 x 48
@@ -135,7 +130,6 @@ class SELayer(nn.Module):
     def __init__(self, inplanes, planes, reduction=16):
         super(SELayer, self).__init__()
         self.global_pool = nn.AdaptiveAvgPool2d((1, 1))
-        #self.max_pool = nn.AdaptiveMaxPool2d((1, 1))
         self.fc1 = nn.Linear(inplanes, planes // reduction)
         self.relu = nn.ReLU(inplace=True)
         self.fc2 = nn.Linear(planes // reduction, planes)
@@ -154,7 +148,6 @@ class SELayer(nn.Module):
         return x
 
 class SelectiveFusionModule(nn.Module):
-    # 通道注意力机制
     def __init__(self, inplanes, planes, reduction=16):
         super(SelectiveFusionModule, self).__init__()
         self.se = SELayer(inplanes, planes, reduction)
@@ -231,7 +224,7 @@ class DSMSFNet(nn.Module):
         return features[0], features[1], features[2], features[3]
 
     def forward(self, x, y):
-        # torch.Size([512, 512])
+
         size_x = x.size()[2:]
 
         # output of the dual source feature fusion structure
