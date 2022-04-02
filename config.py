@@ -43,7 +43,7 @@ if os.path.exists(save_dir_model) is False:
 # train set
 irrg_train_path = os.path.join(root_data, 'irrg_train')
 dsm_train_path =  os.path.join(root_data, 'dsm_train')
-gt_train_path = os.path.join(root_data, 'label_train')
+gt_train_path = os.path.join(root_data, 'gt_train')
 
 # val set
 irrg_val_path = os.path.join(dataset, 'irrg_val')
