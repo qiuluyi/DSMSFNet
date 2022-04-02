@@ -46,8 +46,6 @@ dsm_train_path =  os.path.join(root_data, 'dsm_train')
 gt_train_path = os.path.join(root_data, 'label_train')
 
 # val set
-val_path = '../vaihingen/train_img/val'
-# val_path = '../potsdam/train_img/val'
 irrg_val_path = os.path.join(dataset, 'irrg_val')
 dsm_val_path = os.path.join(dataset, 'dsm_val')
 gt_val_path = os.path.join(dataset, 'gt_val')
